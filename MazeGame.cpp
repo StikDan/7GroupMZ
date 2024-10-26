@@ -226,9 +226,24 @@ void MovePlayer(int dx, int dy)
             ShowPlayer();
             UpdateClock(bonusTime += 10);
             break;
-        }
+        case 7: //мина бонусы
+            HidePlayer();
+			hx = hx + dx;
+            hy = hy + dy;
+            ShowPlayer();
+            UpdateScore(score -= 200);
+            break;
+        case 8: //мина время
+            HidePlayer();
+			hx = hx + dx;
+            hy = hy + dy;
+            ShowPlayer();
+            UpdateClock (timeLimit -= 8);
+            break;
+		}
     }
 }
+       
 
 // Функция управления игрой
 void Control()
