@@ -228,19 +228,19 @@ void MovePlayer(int dx, int dy)
             break;
         case 7: //мина бонусы
             HidePlayer();
-			hx = hx + dx;
+	    hx = hx + dx;
             hy = hy + dy;
             ShowPlayer();
             UpdateScore(score -= 200);
             break;
         case 8: //мина время
             HidePlayer();
-			hx = hx + dx;
+	    hx = hx + dx;
             hy = hy + dy;
             ShowPlayer();
             UpdateClock (timeLimit -= 8);
             break;
-		}
+	}
     }
 }
        
